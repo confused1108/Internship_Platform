@@ -1,0 +1,19 @@
+<?php
+include 'connect.php';
+session_start();
+if($_SESSION['signed_in']==true)
+{
+    if($_SESSION['category']=='1')
+    {
+        header("location:student.php");
+    }
+    else
+    {
+        header("location:employer.php");
+    }
+}
+else
+{
+    header("location:student.php");
+}
+?>
